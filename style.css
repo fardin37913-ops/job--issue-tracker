@@ -244,7 +244,10 @@ body {
      background: #fef3c7; 
      color: #f59e0b;
      }
-.low { background: #f1f5f9; color: #64748b; }
+.low { 
+    background: #f1f5f9; 
+    color: #64748b; 
+}
 
 .card h4 { 
     font-size: 15px; 
@@ -279,7 +282,7 @@ body {
     padding-top: 10px; 
 }
 
-/* --- Modal (Batch03) --- */
+/* --- Modal --- */
 .modal-overlay { 
     position: fixed; 
     inset: 0; 
