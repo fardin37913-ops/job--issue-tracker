@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="login-page" class="auth-container">
+        <div class="login-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="login-logo">
+            <h2>GitHub Issues Tracker</h2>
+            <p>Sign In to manage your issues</p>
+            
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter Username">
+                <span class="hint">Default: admin</span>
+            </div>
+            
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter Password">
+                <span class="hint">Default: admin123</span>
+            </div>
+            
+            <button onclick="handleLogin()" class="sign-in-btn">Sign In</button>
+            <div class="divider"><span>OR</span></div>
+            <div class="demo-box">
+                <p>Demo Credentials:</p>
+                <strong>Username: admin</strong><br>
+                <strong>Password: admin123</strong>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <nav class="navbar">
+            <div class="nav-inner">
+                <div class="brand">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Logo">
+                    <span>GitHub Issues Tracker</span>
+                </div>
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" id="search-input" onkeyup="handleSearch()" placeholder="Search issues...">
+                    </div>
+                    <button class="new-issue-btn">+ New Issue</button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container">
+            <div class="filter-tabs">
+                <button onclick="filterIssues('all')" id="tab-all" class="tab active">All</button>
+                <button onclick="filterIssues('open')" id="tab-open" class="tab">Open</button>
+                <button onclick="filterIssues('closed')" id="tab-closed" class="tab">Closed</button>
+            </div>
+
+            <div class="stats-header">
+                <div class="stats-left">
+                    <div class="stats-icon-bg">
+                        <img src="./images/Aperture.png" width="20">
+                    </div>
+                    <div>
+                        <h3><span id="issue-count">0</span> Issues</h3>
+                        <p>Track and manage your project issues</p>
+                    </div>
+                </div>
+                <div class="stats-right">
+                    <span class="dot open"></span> Open
+                    <span class="dot closed"></span> Closed
+                </div>
+            </div>
+
+            <div id="loader" class="hidden"><div class="spinner"></div></div>
+            <div id="issues-grid" class="grid"></div>
+        </main>
+    </div>
+
+    <div id="issue-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div id="modal-body"></div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
