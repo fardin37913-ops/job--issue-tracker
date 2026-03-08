@@ -357,3 +357,76 @@ body {
     0% { transform: rotate(0deg); } 
     100% { transform: rotate(360deg); } 
 }
+
+
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .nav-inner {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .nav-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input {
+        width: 100%; 
+    }
+
+    .new-issue-btn {
+        width: 100%;
+    }
+
+    .stats-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .stats-right {
+        width: 100%;
+        justify-content: flex-start;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 10px;
+    }
+
+    .filter-tabs {
+        overflow-x: auto; 
+        padding-bottom: 5px;
+        width: 100%;
+    }
+
+    .tab {
+        padding: 8px 15px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+
+    .login-card {
+        width: 90%; 
+        padding: 25px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .modal-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
