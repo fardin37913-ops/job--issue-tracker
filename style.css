@@ -15,7 +15,7 @@ body {
     display: none !important; 
 }
 
-/* --- Auth / Login Page (Batch01) --- */
+/* --- Login Page --- */
 .auth-container { 
     height: 100vh; 
     display: flex; 
